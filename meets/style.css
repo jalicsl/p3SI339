@@ -7,6 +7,7 @@ body {
   background-color: #f4f4f4;
   max-width: 320px;
 }
+
 a {
   text-decoration: none;
   background-color: #333;
@@ -16,25 +17,40 @@ a {
 }
 
 
-/* navigation section */
-nav ul {
-  display: grid;
-  justify-content: space-around;
+/* Navigation Styling */
+#skipper{
+  display: block;
+  text-align: center;
   background-color: #333;
-  padding: 10px 0;
-  margin: 0;
+}
+
+nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five equal-width columns */
 }
 
-nav ul li a {
-  color: #fff;
-  font-size: 16px;
-  padding: 10px;
+nav li {
+  display: flex;
 }
 
-nav ul li a:hover {
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px; /* Set a consistent height for all items */
+  background-color: #333;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
   background-color: #555;
 }
+
 
 /* CSS for header section */
 header {
@@ -58,6 +74,7 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* CSS for meet summary */
 #summary p {
   font-size: 18px;
   color: #333;
@@ -89,7 +106,7 @@ th {
   background-color: #f2f2f2;
 }
 
-/* CSS for athelte section */
+/* CSS for athlete section */
 .individual-results .athlete {
   display: flex;
   align-items: center;
@@ -98,7 +115,7 @@ th {
   margin-bottom: 20px;
   border-radius: 8px;
   background-color: #f9f9f9;
-  position: relative; /*To position the table properly */
+  position: relative;
 }
 
 .athlete figure {
@@ -170,6 +187,43 @@ footer i {
 
 
 /* CSS for gallery */
-#gallery img{
-width: 45%;
+#gallery {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#gallery img {
+  width: 45%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#gallery img:hover {
+  position: relative;
+  z-index: 10;
+  transform: scale(1.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }

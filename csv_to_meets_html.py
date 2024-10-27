@@ -32,7 +32,9 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
    <body>
+   <div id="skipper">
    <a href = "#main">Skip to Main Content</a>
+   </div>
    <nav>
      <ul>
         <li><a href="index.html">Home Page</a></li>
@@ -84,7 +86,8 @@ def csv_to_html(csv_filename, output_folder):
                     <section id="individual-results">\n
                     <h2>Individual Results</h2>"""
 
-                place = row[0]
+                # place = row[0]
+                place = row[0].replace(".", "")
                 grade = row[1]
                 name = row[2]
                 time = row[4]
@@ -178,7 +181,7 @@ def extract_meet_id(url):
         raise ValueError("Meet ID not found in URL.")
 
 # Step 2: Select 12 random photos from the folder
-def select_random_photos(folder_path, num_photos=25):
+def select_random_photos(folder_path, num_photos=20):
     # List all files in the folder
     print(f"Checking {folder_path}")
     all_files = os.listdir(folder_path)
