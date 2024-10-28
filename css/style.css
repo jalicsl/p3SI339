@@ -118,6 +118,10 @@ th {
   position: relative;
 }
 
+.athlete {
+  margin-bottom: 20px;
+}
+
 .athlete figure {
   margin: 0;
   text-align: center;
