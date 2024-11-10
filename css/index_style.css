@@ -1,0 +1,75 @@
+/* Main body style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* header style */
+h1 {
+    margin: 0;
+    padding: 10px;
+    color: #f4f4f4;
+    background-color: #333;
+    text-align: center;
+}
+
+/* list styling */
+ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 20px;
+}
+li {
+    margin: 8px 0;
+    text-align: center;
+    border-radius: 18px;
+    border-color: #333;
+    border-style: double;
+    border-width: thick;
+    padding: 10px;
+    transition: border-width 0.2s ease;
+    text-wrap-style: balance;
+}
+li:hover{
+    border-width: 10px;
+}
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+a:hover {
+    color: #e74c3c;
+}
+
+/* color scheme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #f4f4f4;
+    }
+
+    h1 {
+        color: #f4f4f4;
+        background-color: #333;
+    }
+
+    a {
+        color: white;
+    }
+
+    li {
+        border-color: #f4f4f4;
+    }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    li {
+        transition: none;
+    }
+}
+ 
+/* the page will perform the same in mobile, tablet, and large screen sizes. 
+No need for extra size media queries */
