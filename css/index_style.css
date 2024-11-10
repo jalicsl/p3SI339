@@ -70,6 +70,24 @@ a:hover {
         transition: none;
     }
 }
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#backToTopBtn:hover {
+  opacity: 1;
+}
  
 /* the page will perform the same in mobile, tablet, and large screen sizes. 
 No need for extra size media queries */
