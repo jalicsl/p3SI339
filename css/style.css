@@ -369,3 +369,21 @@ footer i {
     font-size: 1.1em;
   }
 }
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#backToTopBtn:hover {
+  opacity: 1;
+}
