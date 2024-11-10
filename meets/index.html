@@ -8,6 +8,24 @@
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link href="../dist/css/lightbox.css" rel="stylesheet" />
     <script src="../dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+    // Show the button after scrolling down 100px
+    window.onscroll = function() { toggleBackToTopButton() };
+
+    function toggleBackToTopButton() {
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    }
+
+    // Smoothly scroll to the top
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </head>
 <body>
 
@@ -34,6 +52,8 @@
         <li><a href="SEC_Jamboree_1_Womens_5000_Meters_Junior_Varsity_24.html">SEC Jamboree #1 - Women's 5000 Meters Junior Varsity</a></li>
         <li><a href="SEC_Jamboree_1_Womens_5000_Meters_Varsity_24.html">SEC Jamboree #1 - Women's 5000 Meters Varsity</a></li>
     </ul>
+    <button onclick="scrollToTop()" id="backToTopBtn" style="display: none;">Back to Top</button>
+
     
 
 </body>
